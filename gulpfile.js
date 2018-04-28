@@ -30,10 +30,10 @@ const buildHTML = (body) => {
     });
     header += `
     <link rel="stylesheet" href="bundle/main.css">
-
+    
     <title>Frontend Development</title>
     </head><body>
-
+    
     `;
     
     js.forEach(url => {
@@ -69,14 +69,19 @@ gulp.task("sass", function() {
 });
 
 gulp.task("js", () =>
-gulp
-.src("src/main.js")
-.pipe(
-  babel({
-    presets: ["env"]
-  })
-)
-.pipe(gulp.dest("bundle")).pipe(livereload())
+  gulp
+    .src("src/main.js")
+    .pipe(
+      babel({
+        presets: ["env"]
+      })
+    )
+    .on("error", function(error){ 
+      console.log(error.toString())
+      this.emit("end")
+     })
+    .pipe(gulp.dest("bundle"))
+    .pipe(livereload())
 );
 
 gulp.task("watch", function() {
@@ -84,4 +89,5 @@ gulp.task("watch", function() {
   gulp.watch("./src/main.pug", ["pug"]);
   gulp.watch("./src/main.scss", ["sass"]);
   gulp.watch("./src/main.js", ["js"]);
+  gulp.watch("./src/assets.json", ["pug"]);
 });

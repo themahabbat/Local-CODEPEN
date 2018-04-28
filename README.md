@@ -1,5 +1,5 @@
 # Local-CODEPEN
-Codepen alternative on localhost
+Codepen alternative on localhost with Pug, Sass, Babel
 
 ## Installation
 Clone this repository and `cd` into it

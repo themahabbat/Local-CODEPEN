@@ -11,9 +11,12 @@
     "gulp-livereload": "^3.8.1",
     "gulp": "^3.9.1"
   },
-  "devDependencies": {},
-  "scripts": {
+  "devDependencies": {
+    "gulp-pug": "^4.0.1",
+    "pretty": "^2.0.0",
+    "pug": "^2.0.3"
   },
+  "scripts": {},
   "author": "themahabbat",
   "license": "ISC"
 }

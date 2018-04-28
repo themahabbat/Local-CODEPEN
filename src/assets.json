@@ -1,0 +1,10 @@
+{
+   "css": [
+      "https://use.fontawesome.com/releases/v5.0.10/css/all.css",
+      "https://fonts.googleapis.com/css?family=Do+Hyeon"
+   ],
+
+   "js": [
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+   ]
+}
